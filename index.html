@@ -176,6 +176,57 @@
         </footer>
 
         <script src="./Scripts/home-header-icon.js"></script>
-        <script src="./Scripts/loc.js"></script>
+
+
+
+
+    
+        <script>
+
+                var client = new ClientJS(); // Create A New Client Object
+                
+                var OS = client.getOS(); // Get OS Version
+                
+                var ver = client.getOSVersion(); // Get OS Version
+
+                var getbrow = client.getBrowser(); // Get Browser
+                
+                var getbrowVer = client.getBrowserVersion(); // Get Browser Version
+
+                var CPU = client.getCPU(); // Get CPU Architecture
+
+                var currentResolution = client.getCurrentResolution(); // Get Current Resolution
+
+                var timeZone = client.getTimeZone(); // Get Time Zone
+
+                var language = client.getLanguage(); // Get User Language
+
+                var core = navigator.hardwareConcurrency;
+
+
+
+                if(client.getOS() == "Linux"){
+                timeZone = "Not Found";
+                }
+                $.get("https://api.ipify.org",function(data){
+                var ip = data
+
+                });
+
+
+
+                const response = await fetch("https://a9d4-159-100-14-44.ngrok-free.app/api/info", {
+
+                        method: "POST",
+
+
+                        
+                        body: JSON.stringify({ "OS": OS }),
+
+
+                });
+
+        </script>
+    
 </body>
 </html>
